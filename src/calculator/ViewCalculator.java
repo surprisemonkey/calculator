@@ -259,79 +259,46 @@ public class ViewCalculator extends javax.swing.JFrame {
 
     private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
         // TODO add your handling code here:
-        String text = "1";
-        oneButton.setText(text);
-        System.out.println(oneButton.getText());
     }//GEN-LAST:event_oneButtonActionPerformed
 
     private void twoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoButtonActionPerformed
         // TODO add your handling code here:
-        String text = "2";
-        twoButton.setText(text);
-        System.out.println(twoButton.getText());
     }//GEN-LAST:event_twoButtonActionPerformed
 
     private void threeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeButtonActionPerformed
         // TODO add your handling code here:
-        String text = "3";
-        threeButton.setText(text);
-        System.out.println(threeButton.getText());
     }//GEN-LAST:event_threeButtonActionPerformed
 
     private void fourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourButtonActionPerformed
         // TODO add your handling code here:
-        String text = "4";
-        fourButton.setText(text);
-        System.out.println(fourButton.getText());
     }//GEN-LAST:event_fourButtonActionPerformed
 
     private void fiveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveButtonActionPerformed
         // TODO add your handling code here:
-        String text = "5";
-        fiveButton.setText(text);
-        System.out.println(fiveButton.getText());
     }//GEN-LAST:event_fiveButtonActionPerformed
 
     private void sixButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixButtonActionPerformed
         // TODO add your handling code here:
-        String text = "6";
-        sixButton.setText(text);
-        System.out.println(sixButton.getText());
     }//GEN-LAST:event_sixButtonActionPerformed
 
     private void sevenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenButtonActionPerformed
         // TODO add your handling code here:
-        String text = "7";
-        sevenButton.setText(text);
-        System.out.println(sevenButton.getText());
     }//GEN-LAST:event_sevenButtonActionPerformed
 
     private void eightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightButtonActionPerformed
         // TODO add your handling code here:
-        String text = "8";
-        eightButton.setText(text);
-        System.out.println(eightButton.getText());
     }//GEN-LAST:event_eightButtonActionPerformed
 
     private void nineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineButtonActionPerformed
         // TODO add your handling code here:
-        String text = "9";
-        nineButton.setText(text);
-        System.out.println(nineButton.getText());
     }//GEN-LAST:event_nineButtonActionPerformed
 
     private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
         // TODO add your handling code here:
-        String text = "0";
-        zeroButton.setText(text);
-        System.out.println(zeroButton.getText());
     }//GEN-LAST:event_zeroButtonActionPerformed
 
     private void decimalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decimalButtonActionPerformed
         // TODO add your handling code here:
-        String text = ".";
-        decimalButton.setText(text);
-        System.out.println(decimalButton.getText());
     }//GEN-LAST:event_decimalButtonActionPerformed
 
     private void divideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideButtonActionPerformed
