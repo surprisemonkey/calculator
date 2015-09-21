@@ -13,7 +13,10 @@ import java.awt.event.ActionListener;
 public class CalcController {
     private static CalcModel model;
     private static ViewCalculator view;
-    private static ActionListener actionListener;
+    private static ActionListener numberButton;
+    private static ActionListener clearButton;
+    private static ActionListener operationButton;
+    private static ActionListener equalsButton;
     
     /**
      * @param args the command line arguments
@@ -43,16 +46,32 @@ public class CalcController {
         //</editor-fold>
          view = new ViewCalculator();
          view.setVisible(true);
-         actionListener = new ActionListener(){
+         model = new CalcModel();
+         
+         numberButton = new ActionListener(){
              public void actionPerformed(ActionEvent actionEvent){
-                oneButtonPressed();    
+                art = actionEvent.actionCommand();
+             }
+         };
+         view.oneButton.addActionListener(numberButton);
+         
+         twoactionListener = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                oneButtonPressed();
              }
          };
          view.oneButton.addActionListener(actionListener);
+         
+         
     }
     
     private static void oneButtonPressed(){
         view.jLabel1.setText("1");
         model.setOperand(1);
+    }
+    
+    private static void twoButtonPressed(){
+        view.jLabel1.setText("2");
+        model.setOperand(2);
     }
 }
