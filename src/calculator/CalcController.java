@@ -16,6 +16,7 @@ public class CalcController {
     private static ActionListener actionlistener;
     private static ActionListener result;
     private static ActionListener operand;
+    private static String operandor = "";
     
     /**
      * @param args the command line arguments
@@ -47,6 +48,13 @@ public class CalcController {
          view.setVisible(true);
          model = new CalcModel();
          
+         actionlistener = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                 decimalButtonPressed();
+             }
+        };
+        view.decimalButton.addActionListener(actionlistener);
+                  
          actionlistener = new ActionListener(){
              public void actionPerformed(ActionEvent actionEvent){
                 oneButtonPressed();
@@ -94,29 +102,35 @@ public class CalcController {
                 sevenButtonPressed();
              }
          };
-         view.eightButton.addActionListener(actionlistener);
+         view.sevenButton.addActionListener(actionlistener);
+         
          actionlistener = new ActionListener(){
              public void actionPerformed(ActionEvent actionEvent){
                 eightButtonPressed();
              }
          };
-         view.sevenButton.addActionListener(actionlistener);
+         view.eightButton.addActionListener(actionlistener);
          
-         view.nineButton.addActionListener(actionlistener);
          actionlistener = new ActionListener(){
              public void actionPerformed(ActionEvent actionEvent){
                 nineButtonPressed();
              }
          };
-         view.sevenButton.addActionListener(actionlistener);
-         
          view.nineButton.addActionListener(actionlistener);
+
          actionlistener = new ActionListener(){
              public void actionPerformed(ActionEvent actionEvent){
                 zeroButtonPressed();
              }
          };
          view.zeroButton.addActionListener(actionlistener);
+         
+         actionlistener = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                 clearButtonPressed();
+             }
+         };
+         view.clearButton.addActionListener(actionlistener);
          
          operand = new ActionListener(){
              public void actionPerformed(ActionEvent actionEvent){
@@ -125,68 +139,157 @@ public class CalcController {
          };
          view.plusButton.addActionListener(operand);
          
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                minusButtonPressed();
+             }
+         };
+         view.minusButton.addActionListener(operand);
+         
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                multButtonPressed();
+             }
+         };
+         view.multButton.addActionListener(operand);
+         
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                divideButtonPressed();
+             }
+         };
+         view.divideButton.addActionListener(operand);
+         
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                sinButtonPressed();
+             }
+         };
+         view.sinButton.addActionListener(operand);
+         
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                cosButtonPressed();
+             }
+         };
+         view.cosButton.addActionListener(operand);
+         
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                tanButtonPressed();
+             }
+         };
+         view.tanButton.addActionListener(operand);
+         
+         operand = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                expButtonPressed();
+             }
+         };
+         view.expButton.addActionListener(operand);
+         
+         result = new ActionListener(){
+             public void actionPerformed(ActionEvent actionEvent){
+                equalButtonPressed();
+             }
+         };
+         view.equalButton.addActionListener(result);
+         
          
     }
     public static void putText(String insert){
         view.jLabel1.setText(insert);
     }
     
+    private static void decimalButtonPressed(){
+        model.setOperand(".");
+    }
+    
     private static void oneButtonPressed(){
-        view.jLabel1.setText("1");
         model.setOperand("1");
     }
     
     private static void twoButtonPressed(){
-        view.jLabel1.setText("2");
         CalcModel.setOperand("2");
     }
     
     private static void threeButtonPressed(){
-        view.jLabel1.setText("3");
         CalcModel.setOperand("3");
     }
     
     private static void fourButtonPressed(){
-        view.jLabel1.setText("4");
         CalcModel.setOperand("4");
     }
     
     private static void fiveButtonPressed(){
-        view.jLabel1.setText("5");
         CalcModel.setOperand("5");
     }
     
     private static void sixButtonPressed(){
-        view.jLabel1.setText("6");
         CalcModel.setOperand("6");
     }
     
     private static void sevenButtonPressed(){
-        view.jLabel1.setText("7");
         CalcModel.setOperand("7");
     }
     
     private static void eightButtonPressed(){
-        view.jLabel1.setText("8");
         CalcModel.setOperand("8");
     }
     
     private static void nineButtonPressed(){
-        view.jLabel1.setText("9");
         CalcModel.setOperand("9");
     }
     
     private static void zeroButtonPressed(){
-        view.jLabel1.setText("0");
         CalcModel.setOperand("0");
     }
     
     private static void plusButtonPressed(){
-        CalcModel.setOperation();
-        CalcModel.setOperand("1");
+        operandor = "+";
+        CalcModel.setOperation(operandor, "");
     }
     
-    private static void equalButton(){
-        
+    private static void minusButtonPressed(){
+        operandor = "-";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void multButtonPressed(){
+        operandor = "*";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void divideButtonPressed(){
+        operandor = "/";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void sinButtonPressed(){
+        operandor = "sin";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void cosButtonPressed(){
+        operandor = "cos";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void tanButtonPressed(){
+        operandor = "tan";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void expButtonPressed(){
+        operandor = "exp";
+        CalcModel.setOperation(operandor, "");
+    }
+    
+    private static void equalButtonPressed(){
+        System.out.println(operandor + " this is the operandor");
+        CalcModel.setOperation(operandor, "=");
+    }
+    private static void clearButtonPressed(){
+        CalcModel.setClear();
     }
 }
